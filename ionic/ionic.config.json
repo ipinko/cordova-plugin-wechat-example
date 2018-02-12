@@ -1,0 +1,8 @@
+{
+  "name": "Wechat DEMO for cordova.plugin.wechat",
+  "app_id": "",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic1"
+}
