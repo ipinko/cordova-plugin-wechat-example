@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="xu.li.test.cordova.plugin.wechat" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="w.chainclub.one" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Wechat DEMO for cordova.plugin.wechat</name>
     <description>
         An Ionic Framework and Cordova project.
@@ -68,7 +68,7 @@
         <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
     </platform>
     <plugin name="cordova-plugin-wechat" spec="^2.1.0">
-        <variable name="WECHATAPPID" value="wx4a525790c75c494f" />
+        <variable name="WECHATAPPID" value="wxa2b09ca566f98eb5" />
     </plugin>
     <engine name="ios" spec="~4.5.4" />
     <engine name="android" spec="~7.0.0" />
