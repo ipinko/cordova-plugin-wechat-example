@@ -34,7 +34,7 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-wechat": {
-        "WECHATAPPID": "wxf8a102bdacbb4244"
+        "WECHATAPPID": "wxa2b09ca566f98eb5"
       }
     },
     "platforms": [
