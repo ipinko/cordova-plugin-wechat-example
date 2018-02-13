@@ -1,6 +1,6 @@
 {
   "name": "Wechat DEMO for cordova.plugin.wechat",
-  "app_id": "w.chainclub.one",
+  "app_id": "wallet.chainclub.cccc",
   "integrations": {
     "cordova": {}
   },
