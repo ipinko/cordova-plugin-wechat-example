@@ -1,7 +1,49 @@
 angular.module('starter.controllers', [])
 
 .controller('DemoCtrl', function ($scope, $ionicPopup) {
-
+    $scope.byWEIXINlogin = function(){  
+      // 授权读取用户信息  
+      var scope = "snsapi_userinfo",  
+        state = "_" + ( + new Date());  
+      // 第一步：请求CODE  
+      Wechat.auth(scope, state, function (response) {  
+        // 第二步：通过code获取access_token   在这里就从微信返回了app，以下都是在app里进行的操作了  
+          var url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxa2b09ca566f98eb5&secret=b3ea0fe956e8edd2e1982ce4237e6c21&code="+response.code +"&grant_type=authorization_code";  
+        $.get(url,function(result){  
+          var resultjson = $.parseJSON(result);  
+          var access_token = resultjson.access_token;  
+          var openid = resultjson.openid;  
+          // 第三步：通过access_token调用接口  
+          var url1 = "https://api.weixin.qq.com/sns/auth?access_token=" + access_token +"&openid="+ openid;  
+          $.get(url1,function(result){  
+            var statusResult = $.parseJSON(result);  
+            // 第四步：检验授权凭证（access_token）是否有效  
+            if("ok" == statusResult.errmsg){  
+              var url2 = "https://api.weixin.qq.com/sns/userinfo?access_token=" +access_token +"&openid="+ openid;  
+              // 获取用户个人信息（UnionID机制）  
+              $.get(url2,function(result){  
+                var userinfo = $.parseJSON(result);  
+                /*userinfo.openid;  
+                 userinfo.nickname;  
+                 userinfo.sex;  
+                 userinfo.language;  
+                 userinfo.city;  
+                 userinfo.province;  
+                 userinfo.country;  
+                 userinfo.headimgurl;  
+                 userinfo.privilege;  
+                 userinfo.unionid;*/  
+              })  
+            }else{  
+              // 请重新获取access_token  
+            };  
+      
+          });  
+        })  
+      }, function (reason) {  
+        alert("Failed: " + reason);  
+      });  
+    };  
     $scope.data = {
         selectedScene: 0,
         selectedSceneLabel: "会话"
