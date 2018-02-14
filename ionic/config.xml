@@ -70,6 +70,6 @@
     <plugin name="cordova-plugin-wechat" spec="^2.1.0">
         <variable name="WECHATAPPID" value="wxa2b09ca566f98eb5" />
     </plugin>
-    <engine name="ios" spec="~4.5.4" />
-    <engine name="android" spec="~7.0.0" />
+    <engine name="ios" spec="4.5.4" />
+    <engine name="android" spec="^7.0.0" />
 </widget>
