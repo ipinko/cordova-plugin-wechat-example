@@ -1,6 +1,6 @@
 {
   "name": "cccc",
-  "app_id": "hk.ganguo.XXXXX",
+  "app_id": "wallet.chainclub.cccc",
   "integrations": {
     "cordova": {}
   },
