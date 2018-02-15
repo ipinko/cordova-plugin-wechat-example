@@ -1,6 +1,6 @@
 {
   "name": "cccc",
-  "app_id": "wallet.chainclub.cccc",
+  "app_id": "one.chainclub.copay",
   "integrations": {
     "cordova": {}
   },
